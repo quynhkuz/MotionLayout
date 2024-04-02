@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Transition
+        app:constraintSetStart="@+id/start_view_menu"
+        app:constraintSetEnd="@id/end_view_menu"
+        app:duration="500"
+        >
+        <OnSwipe
+            app:dragDirection="dragLeft"
+            app:touchAnchorId="@+id/v_menu"
+            app:touchAnchorSide="left" />
+    </Transition>
+
+<!--    <Transition-->
+<!--        app:constraintSetStart="@+id/start_view_menu"-->
+<!--        app:constraintSetEnd="@id/end_view_menu"-->
+<!--        app:duration="500">-->
+<!--        <OnClick app:targetId="@+id/ic_add" />-->
+<!--    </Transition>-->
+
+    <ConstraintSet android:id="@+id/start_view_menu">
+        <Constraint
+            android:id="@+id/v_menu"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end_view_menu">
+        <Constraint
+            android:id="@+id/v_menu"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+    </ConstraintSet>
+
+
+
+
+</MotionScene>
